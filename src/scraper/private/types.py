@@ -11,14 +11,14 @@ METRICS = [
     "capacityPillarThree",
     "capacityPillarTwo",
     "covidOccupiedMVBeds",
-    "cumAdmissions", 
+    "cumAdmissions",
     "cumAntibodyTestsByPublishDate",
     "cumCasesByPublishDate",
-    "cumCasesByPublishDateRate"
+    "cumCasesByPublishDateRate",
 ]
 
 
-class UrlValues(BaseModel):
+class ApiRequestValues(BaseModel):
     format: str
     metrics: List[str]
     date: datetime

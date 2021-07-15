@@ -1,14 +1,9 @@
-from datetime import datetime
-from scraper.types import UrlValues
+from scraper.private.types import *
 
 URL = "https://api.coronavirus.data.gov.uk/v2/data?areaType=overview"
 
 
-def construct_url_object(format: str, metrics: list[str], date: datetime) -> UrlValues:
-    return UrlValues(format=format, metrics=metrics, date=date)
-
-
-def construct_url(url_obj: UrlValues) -> str:
+def generate_url(url_obj: ApiRequestValues) -> str:
     # Base URL
     url = f"{URL}"
 

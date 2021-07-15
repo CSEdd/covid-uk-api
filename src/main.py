@@ -1,15 +1,16 @@
 from datetime import datetime
 
 
-from scraper.url_factory import construct_url, construct_url_object
+from scraper.public.functions import *
+from scraper.public.type_constructors import *
 
 
 def main():
     date = datetime(2021, 7, 14)
-    url_obj = construct_url_object(
+    api_request_values = create_api_request_values(
         "csv", ["capacityPillarFour", "capacityPillarOne"], date
     )
-    url = construct_url(url_obj)
+    url = generate_url(api_request_values)
     print(url)
 
 
